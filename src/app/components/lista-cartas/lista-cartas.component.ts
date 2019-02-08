@@ -33,5 +33,15 @@ export class ListaCartasComponent implements OnInit {
      this.apiService.changeIdNameArena(data);
    }
 
+   filterCards( rarity ) {
+      if (rarity === 'all') {
+        this.listaCartas = this.listaAuxiliar.slice();
+      } else {
+        this.listaCartas = this.listaAuxiliar.slice();
+        this.listaCartas = this.listaCartas.filter( carta => carta.rarity.toLowerCase() === rarity);
+      }
+
+   }
+
 
 }

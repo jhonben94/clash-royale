@@ -1,18 +1,26 @@
-<div class= "estadisticas m-2 ">
+<div class= "" id="description">
   <!-- Arena -->
       <div class="row">
           <div class="col m-2" style="text-align: center">
               <h2> Where can you find it?</h2>
               <h3> <b> Here:</b> {{ name | uppercase}}</h3> 
-              <img  src="./../../../assets/images/arenas/{{ arena}}.png  " width="300" height="300" alt="">
+              <img *ngIf="mostrarArena" src="./../../../assets/images/arenas/{{ arena}}.png  " width="300" height="300" alt="">
+              <img *ngIf="!mostrarArena" src="./../../../assets/images/emotions/thumbs-up.gif" width="200" height="200" alt="">
           </div>
           <div class="col m-2">
-              <h3> <b>Card Name:</b> {{cardName}}</h3>
+              <h3> <b>Card Name:</b> {{cardName}} </h3>
               <h3> <b> Cost:</b> {{ cost}}  <img *ngIf="cost" width="25" height="30"src="./../../../assets/images/ui/cost.png" alt="" srcset=""></h3>
               <h3> <b>Description: </b> </h3>
               <p><i>{{descripcion}}</i> </p>
               <h3><b>Type:</b> {{type}} </h3>
               <h3> <b>Rarity:</b> {{rarity | uppercase}} <img *ngIf="rarity" width="25" height="30"src="./../../../assets/images/ui/{{rarity}}.png" alt="" srcset=""></h3>
+              <img *ngIf="mostrarArena" width="100" height="120"src="http://www.clashapi.xyz/images/cards/{{idName}}.png" alt="" srcset="">
+                
+              
           </div>
       </div>
+      <div class="col-12" style="text-align: right"> 
+        <a href="#busqueda">  <img  src="./../../../assets/images/ui/upgrade.png  " width="50" height="50" alt=""></a>
+    </div>
 </div>
+<hr>

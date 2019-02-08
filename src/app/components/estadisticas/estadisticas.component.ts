@@ -18,18 +18,30 @@ export class EstadisticasComponent implements OnInit {
   type: string;
   rarity: string;
   cardName: string;
+  idName: string;
+  mostrarArena: boolean;
   constructor(public apiService: ApiService, public http: HttpClient) { }
   ngOnInit() {
     this.apiService.currentArena.subscribe( data => {
 
-      if ( !( typeof data === 'object' && Object.keys(data).length === 0) ){
+      if ( !( typeof data === 'object' && Object.keys(data).length === 0) ) {
         this.data = data;
+        this.mostrarArena = true;
         this.cardName = data.name;
         this.cost = data.elixirCost;
         this.descripcion = data.description;
         this.type = data.type;
+        this.idName = data.idName;
         this.rarity = data.rarity.toLowerCase();
         this.getArenaData(data.arena);
+      } else {
+       /*  this.data = data; */
+        this.cardName = 'Card Name ';
+        this.cost = 0;
+        this.descripcion = 'Something about the card';
+        this.type = 'Could be Spell, Trop, etc';
+        this.idName = 'data.idName';
+        this.rarity = 'Show the rarity of the card';
       }
     });
   }

@@ -8,6 +8,8 @@ import { EstadisticasComponent } from './components/estadisticas/estadisticas.co
 import { ListaCartasComponent } from './components/lista-cartas/lista-cartas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
+import { InfoComponent } from './components/info/info.component';
+import { TowersComponent } from './components/towers/towers.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FooterComponent } from './components/footer/footer.component';
     CartasComponent,
     EstadisticasComponent,
     ListaCartasComponent,
-    FooterComponent
+    FooterComponent,
+    InfoComponent,
+    TowersComponent
   ],
   imports: [
     BrowserModule,

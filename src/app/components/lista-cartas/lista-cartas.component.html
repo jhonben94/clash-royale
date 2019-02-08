@@ -1,34 +1,38 @@
-<div class="container m-2">
-  
-<div style="text-align: center">
-    <button (click)="filterCards('common')" type="button" class="btn btn-light">
-      Common <img width="25" height="30"src="./../../../assets/images/ui/common.png" alt="" srcset="">
-    </button>
-    <button  (click)="filterCards('rare')" type="button " class="btn btn-light">
-      Rare <img width="25" height="30"src="./../../../assets/images/ui/rare.png" alt="" srcset="">
-    </button>
-    <button  (click)="filterCards('epic')" type="button" class="btn btn-light">
-      Epic <img width="25" height="30"src="./../../../assets/images/ui/epic.png" alt="" srcset="">
-    </button>
-    <button  (click)="filterCards('legendary')" type="button " class="btn btn-light">
-      Legendary <img width="25" height="30"src="./../../../assets/images/ui/legendary.png" alt="" srcset="">
-    </button>
-    <button  (click)="filterCards('all')" type="button " class="btn btn-light">
-        All <img width="25" height="30"src="./../../../assets/images/ui/legendary-unknown.png" alt="" srcset="">
-      </button>
-</div>
-<ul class="list-group m-2">
-    <li id=item._id (click)="sendData(item)" class="list-group-item active-dark" *ngFor="let item of listaCartas"> 
-         <div class="card bg-light">
-            <div class="card-header">{{ item.name }}</div>
-            <div class="card-body">
-              <div class="card-title">
+  <div class="container-fluid" >
+      <div style="text-align: center" id="busqueda">
+          <button (click)="filterCards('common')" type="button" class="btn btn-light">
+            Common <img width="25" height="30"src="./../../../assets/images/ui/common.png" alt="" srcset="">
+          </button>
+          <button  (click)="filterCards('rare')" type="button " class="btn btn-light">
+            Rare <img width="25" height="30"src="./../../../assets/images/ui/rare.png" alt="" srcset="">
+          </button>
+          <button  (click)="filterCards('epic')" type="button" class="btn btn-light">
+            Epic <img width="25" height="30"src="./../../../assets/images/ui/epic.png" alt="" srcset="">
+          </button>
+          <button  (click)="filterCards('legendary')" type="button " class="btn btn-light">
+            Legendary <img width="25" height="30"src="./../../../assets/images/ui/legendary.png" alt="" srcset="">
+          </button>
+          <button  (click)="filterCards('all')" type="button " class="btn btn-light">
+              All <img width="25" height="30"src="./../../../assets/images/ui/legendary-unknown.png" alt="" srcset="">
+            </button>
+      </div>
+<hr>
+    <div class="row">
+        <a href="#description" class="col-sm-2"(click)="sendData(item)"  *ngFor="let item of listaCartas" >
+            <div class="card bg-dark text-white" >
+                
+                <div class="card-header">
+                </div>
+                <p class="card-title">{{item.name}}</p>
+                <div class="card-body">
+                    <img height="140" width="115" src="http://www.clashapi.xyz/images/cards/{{item.idName}}.png" alt="" srcset="">
+                </div>
+      
+                <div class="card-footer">
+      
+                </div>
               </div>
-              <img src="http://www.clashapi.xyz/images/cards/{{item.idName}}.png" alt="" srcset="">
-            </div>
-          </div>
-     
-
-    </li>
-</ul>
-</div>
+        </a>
+    </div>
+  </div>
+  <hr>

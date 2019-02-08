@@ -6,10 +6,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
-
-ul{height:500px; width:100%;}
-ul{overflow:hidden; overflow-y:scroll;}
-
 h2{
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -18,4 +14,9 @@ h2{
 
 .estadisticas{
     height:500px;
+}
+
+a:hover{
+    color: #ffffff;
+    text-decoration: none;  
 }

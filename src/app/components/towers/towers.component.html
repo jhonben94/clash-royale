@@ -1,0 +1,127 @@
+
+<div class="container" id="Towers">
+    <div class="row">
+       
+       <div class="col-12" style="text-align: center">
+          <h2>Want to know more about towers ? </h2>
+       </div>
+       <div class="col-12" style="text-align: center">
+         <ul class="list-inline">
+           <li class="list-inline-item" *ngFor="let ind of imagenes">
+              <button (click)="setTowerData(ind)"type="button" class="btn btn-light"><img width="50" src="./../../../assets/images/levels/{{ind}}.png"></button>
+           </li>
+         </ul>
+       </div>
+      <div class="col-lg-6">
+          <div class="card bg-dark text-white" >
+                    
+              <div class="card-header">
+              </div>
+              <h2 class="card-title">King Tower!</h2>
+              <div class="card-body">
+               
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-6">
+                              <h4><b>Hit Points:</b> {{kingTower.hitpoints}} </h4>
+                          </div>
+                          <div class="col-6">
+                              <img src="./../../../assets/images/stats/hitpoints.png" width="40"  alt="">
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <h4><b>Hit Speed:</b> {{kingTower.hitSpeed}} </h4>
+                            </div>
+                            <div class="col-6">
+                                <img src="./../../../assets/images/stats/hit-speed.png" width="40"  alt="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h4><b>Range:</b> {{kingTower.range}}</h4>
+                            </div>
+                            <div class="col-6">
+                                <img src="./../../../assets/images/stats/range.png" width="40"  alt="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h4><b>Damage:</b> {{kingTower.damage}}</h4>
+                            </div>
+                            <div class="col-6">
+                                <img src="./../../../assets/images/stats/damage.png" width="40"  alt="">
+                            </div>
+                        </div>
+                     </div>
+                                    
+                     
+               </div>
+      
+              <div class="card-footer">
+      
+              </div>
+            </div>
+      </div>
+      <div class="col-lg-6">
+          <div class="card bg-dark text-white" >
+                    
+              <div class="card-header">
+              </div>
+              <h2 class="card-title"> Arena Tower! </h2>
+              <div class="card-body">
+               
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-6">
+                          <h4><b>Hit Points:</b> {{arenaTower.hitpoints}} </h4>
+                      </div>
+                      <div class="col-6">
+                          <img src="./../../../assets/images/stats/hitpoints.png" width="40"  alt="">
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h4><b>Hit Speed:</b> {{arenaTower.hitSpeed}} </h4>
+                        </div>
+                        <div class="col-6">
+                            <img src="./../../../assets/images/stats/hit-speed.png" width="40"  alt="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <h4><b>Range:</b> {{arenaTower.range}}</h4>
+                        </div>
+                        <div class="col-6">
+                            <img src="./../../../assets/images/stats/range.png" width="40"  alt="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <h4><b>Damage:</b> {{arenaTower.damage}}</h4>
+                        </div>
+                        <div class="col-6">
+                            <img src="./../../../assets/images/stats/damage.png" width="40"  alt="">
+                        </div>
+                    </div>
+                 </div>   
+           </div>
+      
+              <div class="card-footer">
+      
+              </div>
+            </div>
+      </div>
+     
+    </div>
+  
+  </div>
+  <div class="col-12" style="text-align: right"> 
+        <a href="#busqueda">  <img  src="./../../../assets/images/ui/upgrade.png  " width="50" height="50" alt=""></a>
+    </div>
+
+<hr>
